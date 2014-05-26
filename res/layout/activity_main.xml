@@ -9,6 +9,7 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -23,20 +24,19 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/firstNameText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="First Name" />
 
                 <EditText
-                    android:id="@+id/editText1"
+                    android:id="@+id/lastNameText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10" >
 
                     <requestFocus />
                 </EditText>
-
             </TableRow>
 
             <TableRow
@@ -55,7 +55,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10" />
-
             </TableRow>
 
             <TableRow
@@ -76,19 +75,27 @@
             android:layout_height="wrap_content" >
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/OKbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OK" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/cancelButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel" />
 
         </LinearLayout>
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:text="コメント出るとこ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
