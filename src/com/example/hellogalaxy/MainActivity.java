@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
@@ -29,7 +30,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// TODO 自動生成されたメソッド・スタブ
-		Log.v("aaaa","なった");
 		switch(v.getId()){
 		case R.id.OKbutton:
 			EditText etv = (EditText)findViewById(R.id.firstNameText);
@@ -40,6 +40,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 			 TextView tv = (TextView)findViewById(R.id.resultLabel);
 			 tv.setText("あなたでしたか、"+ inputMsg + inputMsg2 +"さん。");
+
+			 Intent intent = new Intent(MainActivity.this,MsgActivity.class);
+			 startActivity(intent);
 		}
 
 	}
